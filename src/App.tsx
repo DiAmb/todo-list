@@ -30,7 +30,11 @@ function App() {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
   const clearTodos = () => {
-    setTodos([]);
+    if (
+      window.confirm("¿Estás seguro de que deseas eliminar todas las tareas?")
+    ) {
+      setTodos([]);
+    }
   };
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-600 to-blue-300 flex flex-col">
