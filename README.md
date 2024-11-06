@@ -1,50 +1,19 @@
-# React + TypeScript + Vite
+# Todo List Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **Todo List** project developed in **React** with **TypeScript**, using **Vite** as the build tool and **Tailwind CSS** for interface design.
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The purpose of this project is to create a task list application where users can add, delete, and mark tasks as completed. This project is part of an assignment and is available for review in the following Pull Request:
 
-## Expanding the ESLint configuration
+- [Pull Request #1: Assignment Implementation - Todo List](https://github.com/DiAmb/todo-list/pull/1)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+This project was created using:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Vite**: A fast build tool for web projects.
+- **React** (with TypeScript): A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A CSS framework for visual design.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
